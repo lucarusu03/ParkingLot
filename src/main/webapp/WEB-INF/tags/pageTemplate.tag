@@ -1,3 +1,4 @@
+<%@ attribute name="pagetitle" %>
 <%@tag description="base page template" pageEncoding="UTF-8"%>
 <%@attribute name="pageTitle"%>
 <!DOCTYPE html>
