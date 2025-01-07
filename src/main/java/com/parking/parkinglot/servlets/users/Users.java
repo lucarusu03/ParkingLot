@@ -1,4 +1,4 @@
-package com.parking.parkinglot.servlets;
+package com.parking.parkinglot.servlets.users;
 
 import com.parking.parkinglot.common.UserDto;
 import com.parking.parkinglot.ejb.InvoiceBean;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-@DeclareRoles({"READ_USERS", "WRITE_USERS"})
+@DeclareRoles({"READ_USERS", "WRITE_USERS","INVOICING"})
 @ServletSecurity(value = @HttpConstraint(rolesAllowed = {"READ_USERS"}),
         httpMethodConstraints = {@HttpMethodConstraint(value = "POST", rolesAllowed =
                 {"WRITE_USERS"})})
@@ -36,7 +36,7 @@ public class Users extends HttpServlet {
             Collection<String> usernames = userBean.findUsernamesByUserIds(invoiceBean.getUserIds());
             request.setAttribute("invoices", usernames);
         }
-        request.getRequestDispatcher("/WEB-INF/pages/users.jsp").forward(request,response);
+        request.getRequestDispatcher("/WEB-INF/pages/users/users.jsp").forward(request,response);
     }
 
     @Override
