@@ -27,6 +27,13 @@
               'Users' ? 'active' : ''}" aria-current="page" href="${pageContext.request.contextPath}/Users">Users</a>
             </c:if>
           </li>
+          <li class="nav-item">
+            <c:if test="${pageContext.request.isUserInRole('READ_USERS')}">
+              <a class="nav-link
+              ${activePage eq
+              'Report' ? 'active' : ''}" aria-current="page" href="${pageContext.request.contextPath}/Report">Report</a>
+            </c:if>
+          </li>
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">

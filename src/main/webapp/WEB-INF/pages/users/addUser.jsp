@@ -4,10 +4,12 @@
 
 <t:pageTemplate pageTitle="AddUsers">
     <h1>Add User</h1>
-    <form class="needs-validation" novalidate method="POST" action="${pageContext.request.contextPath}/AddUser"> <div class="row">
+    <form class="needs-validation" novalidate method="POST" action="${pageContext.request.contextPath}/AddUser">
+        <div class="row">
         <div class="col-md-6 mb-3">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="" value="" required> <div class="invalid-feedback">
+            <input type="text" class="form-control" id="username" name="username" placeholder="" value="" required>
+            <div class="invalid-feedback">
             Username is required.
         </div>
         </div>
@@ -29,6 +31,7 @@
             </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="user_groups">Groups</label>
